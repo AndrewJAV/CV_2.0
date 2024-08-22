@@ -26,7 +26,7 @@ class Language(models.Model):
 class Aptitude(models.Model):
     value = models.CharField(max_length=30, null=False)
 
-class Skills(models.Model):
+class Skill(models.Model):
     value = models.CharField(max_length=30, null=False)
 
 class Education(models.Model):
