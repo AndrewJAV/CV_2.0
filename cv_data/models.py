@@ -17,7 +17,7 @@ class Contact(models.Model):
         ('other','Other'),
     ]
     value = models.CharField(max_length=50, null=False)
-    kind = models.CharField(choices=TYPE_CHOICES)
+    kind = models.CharField(max_length=20, choices=TYPE_CHOICES)
 
 class Language(models.Model):
     name = models.CharField(max_length=20, null=False)

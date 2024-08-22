@@ -1,0 +1,28 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    min-height: 100px;
+    padding:0px;
+    margin:0px;
+    background-color: lightgray;
+}
+
+.gray-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-height: 50%;
+    margin:0px;
+    padding:0px;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
