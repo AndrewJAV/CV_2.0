@@ -5,6 +5,7 @@ def showData(request):
 
     person = Person.objects.first()
     languages = Language.objects.all()
+    contacts = Contact.objects.all()
     aptitudes = Aptitude.objects.all()
     skills = Skill.objects.all()
     education = Education.objects.all()
@@ -12,6 +13,7 @@ def showData(request):
     context = {
         'person':person,
         'languages':languages,
+        'contacts':contacts,
         'aptitudes':aptitudes,
         'skills':skills,
         'education':education,
