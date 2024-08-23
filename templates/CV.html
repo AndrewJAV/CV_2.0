@@ -26,11 +26,24 @@
                 <hr>
                 {% for contact in contacts %}
                     <div class="contact-item">
-                        <div class="contact-icon-container">
-                            <img src="{{contact.kind}}" alt="" class="icon-img">
+                        <div class="contact-icon-container circle-container">
+                            <img src="{% static 'images/'%}{{contact.kind}}.png" alt="" class="icon-img">
                         </div>
                         
                         <h1 class="cv-section-subtitle">{{contact.value}}</h1>
+                    </div>
+                {% endfor %}
+            </section>
+
+            <section class="cv-section" name="languages">
+                <h1 class="cv-section-title">IDIOMAS</h1>
+                <hr>
+                {% for language in languages %}
+                    <div class="languages-item">
+                        <h1 class="cv-section-subtitle"> {{language.name}} </h1>
+                        <div class="bar-container">
+                            <div class="load-bar" style="width: {{language.proficiency}}% ;"></div>
+                        </div>
                     </div>
                 {% endfor %}
             </section>
@@ -43,6 +56,37 @@
                         <li>{{aptitude.value}}</li>
                     {% endfor %}
                 </ul>
+            </section>
+        </div>
+
+        <div class="white-container">
+            <div class="name-container">
+                <img src="{% static 'images/background-image.png' %}" alt="" class="background-img">
+                <h1 class="overlaid-text">{{person.name}}</h1>
+            </div>
+
+            <section class="cv-section" name="skills">
+                <h1 class="cv-section-title">HABILIDADES</h1>
+                <hr>
+                <ul class="list">
+                    {% for skill in skills %}
+                        <li>{{skill.value}}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="cv-section">
+                {% if education|length > 0 %}
+                <h1 class="cv-section-title">EDUCACIÓN</h1>
+                <hr>
+                {% endif %}
+                {% for item in education %}
+                    <div class="education-item">
+                        <p class="education-item-title">{{item.institution}}</p>
+                        <p class="education-item-desc"> {{item.description}}</p>
+                        <p class="education-item-desc"> {{item.start_date}} - {{item.end_date}} | {{item.location}}</p>
+                    </div>
+                {% endfor %}
             </section>
         </div>
 

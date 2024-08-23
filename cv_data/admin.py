@@ -6,4 +6,5 @@ admin.site.register(Education)
 admin.site.register(Contact)
 admin.site.register(Skill)
 admin.site.register(Aptitude)
+admin.site.register(Language)
 # Register your models here.
